@@ -69,35 +69,59 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript");
+
+let codingPosition = inputString.indexOf("Coding");
+
+let startsWithWelcome = inputString.trim().startsWith("Welcome"); 
+let endsWithToday = inputString.trim().endsWith("today.");  
+console.log("1. Searching:");
+console.log("hasJavaScript:", hasJavaScript);      
+console.log("codingPosition:", codingPosition);       
+console.log("startsWithWelcome:", startsWithWelcome);
+console.log("endsWithToday:", endsWithToday);            
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase();
+
+let uppercaseString =  inputString.toUpperCase();
+let trimmedString = inputString.trim();
+let replacedString = inputString.replace("JavaScript", "coding");
+
+console.log("2. Transforming:");
+console.log("lowercaseString:", lowercaseString);
+console.log("uppercaseString:", uppercaseString);
+console.log("trimmedString:", trimmedString);
+console.log("replacedString:", replacedString);
+
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.split(" ");
+console.log("3. Breaking Apart:");
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0);
+let extractedBootcamp = inputString.slice(inputString.indexOf("Bootcamp"), inputString.indexOf("Bootcamp") + "Bootcamp".length);
 
 // Log all results
-console.log({
-  hasJavaScript,
-  codingPosition,
-  startsWithWelcome,
-  endsWithToday,
-  lowercaseString,
-  uppercaseString,
-  trimmedString,
-  replacedString,
-  wordsArray,
-  firstCharacter,
-  extractedBootcamp,
-});
+console.log("1. Searching:");
+console.log("hasJavaScript:", hasJavaScript);         
+console.log("codingPosition:", codingPosition);       
+console.log("startsWithWelcome:", startsWithWelcome); 
+console.log("endsWithToday:", endsWithToday);         
+console.log("----------------------------------");
+
+console.log("2. Transforming:");
+console.log("lowercaseString:", lowercaseString);
+console.log("uppercaseString:", uppercaseString);
+console.log("trimmedString:", trimmedString);
+console.log("replacedString:", replacedString);
+console.log("----------------------------------");
+
+console.log("wordsArray:", wordsArray);
+console.log("----------------------------------");
+
+console.log("4. Retrieving:");
+console.log("firstCharacter:", firstCharacter);      
+console.log("extractedBootcamp:", extractedBootcamp); 
+
